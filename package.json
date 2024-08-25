@@ -1,0 +1,9 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "build": "esbuild app/javascript/* --bundle --outdir=app/assets/builds"
+  },
+  "dependencies": {
+    "esbuild": "^0.23.1"
+  }
+}

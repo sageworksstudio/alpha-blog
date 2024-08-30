@@ -1,9 +1,9 @@
 class PagesController < ApplicationController
   def home
-    console
+    # console
   end
 
   def about
-    console
+    # console
   end
 end

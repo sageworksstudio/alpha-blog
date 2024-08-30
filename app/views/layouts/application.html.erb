@@ -16,18 +16,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%# <%= javascript_importmap_tags %>
-    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true %>
+    <%= javascript_importmap_tags %>
+    <%# <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <% flash.each do |name, msg| %>
-        <p class="text-green-700"><%= msg %></p>
-      <% end %>
+  <body class="bg-gray-100">
+    <%= render 'layouts/messages' %>
+    <%= render 'layouts/nav' %>
+    <main class="container mx-auto mb-12 mt-32">
       <%= yield %>
     </main>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
